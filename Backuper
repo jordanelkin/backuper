@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+echo enter name of home folder:
+
+read HOME
+
+DIR="/Users/$HOME/Documents"
+
+echo Looking for drives:
+
+df -h
+
+echo Please select drive using mounted name
+
+read DRIVE
+
+DISKPATH="/Volumes/$DRIVE/"
+
+echo selecting drive: "$DISKPATH"
+
+echo select folder on drive $DRIVE
+
+read FOLDER
+
+cp -av "$DIR" "$DISKPATH$FOLDER"
